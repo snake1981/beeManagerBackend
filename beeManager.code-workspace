@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\beeManagerFrontend"
+		},
+		{
+			"path": "..\\nuxt3-pinia"
+		}
+	],
+	"settings": {}
+}
