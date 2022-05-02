@@ -21,7 +21,7 @@ log4js.configure({
     },
   },
   categories: {
-    default: { appenders: ["beeManager"], level: "DEBUG" },
+    default: { appenders: ["beeManager"], level: "TRACE" },
     access: { appenders: ["access"], level: "DEBUG" },
     debug: { appenders: ["debug"], level: "DEBUG" },
   },
@@ -33,6 +33,6 @@ module.exports = {
   debug: log4js.getLogger("debug"),
   stdout: log4js.getLogger("beeManager"),
   express: log4js.connectLogger(log4js.getLogger("beeManager"), {
-    level: log4js.levels.INFO,
+    level: log4js.levels.TRACE,
   }),
 };

@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors')
 const connectDb = require("./config/db");
 const { locations, hives, queens, hiveLogs } = require("./routes/index");
 const swaggerJsDoc = require("swagger-jsdoc");
@@ -12,6 +13,7 @@ logger.stdout.info("Connecting to Database");
 connectDb();
 
 app.use(express.json());
+app.use(cors())
 
 const swaggerOptions = {
   swaggerDefinition: {
